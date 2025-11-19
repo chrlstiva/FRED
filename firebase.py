@@ -31,9 +31,9 @@ class RPiCamStillHumanDetector:
 
         # 🔥 NEW: Initialize Firebase
         print("🌐 Connecting to Firebase...")
-        cred = credentials.Certificate("/home/beris/work/FRED/serviceAccountKey.json.json")
+        cred = credentials.Certificate("/home/beris/work/FRED/serviceAccountKey.json")
         firebase_admin.initialize_app(cred, {
-            'databaseURL': 'https://your-project-id-default-rtdb.firebaseio.com/'
+            'databaseURL': 'https://fred-90e16-default-rtdb.asia-southeast1.firebasedatabase.app/'
         })
         self.firebase_ref = db.reference('human_detections')
         print("✅ Connected to Firebase")
